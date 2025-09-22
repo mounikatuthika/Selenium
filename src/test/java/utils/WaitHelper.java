@@ -16,6 +16,7 @@ public class WaitHelper {
         public void waitforElement(WebElement element, long timeOutofseconds){
             WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(timeOutofseconds));
             wait.until(ExpectedConditions.visibilityOf(element));
+            waitforElement();
         }
     }
 
